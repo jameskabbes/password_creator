@@ -1,7 +1,8 @@
 {
-    "word_list":{
-        "inside_data_dir": true,
-        "rel_path": "words.txt",
-        "path": ""
+    "words":{
+        "path":{
+            "rel_obj": "data_Dir",
+            "path_string": "words.txt"
+        }
     }
 }

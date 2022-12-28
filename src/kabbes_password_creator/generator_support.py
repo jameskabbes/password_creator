@@ -167,12 +167,7 @@ def word_password(num_words = 2, num_digits = 1, num_symbols = 1, camelcase = Tr
 
     import random
 
-    file_string = ps.read_text_file( kabbes_password_creator.words_Path.p )
-
-    words = []
-    for i in file_string.split( '\n' ):
-        words.append( i.strip() )
-
+    words = kabbes_password_creator.settings.words.Path.read().split('\n')
     words_to_use = []
     for i in range(num_words):
         words_to_use.append( random.choice(words) )
