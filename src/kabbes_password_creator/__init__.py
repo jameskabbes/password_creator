@@ -10,4 +10,4 @@ _repo_Dir = do.Dir( os.path.abspath( __file__ ) ).ascend(level_to_ascend=3)
 DEFAULT_CONFIG_PATH = _Dir.join_Path( path = 'default_config.json' )
 
 ### Imports
-from .Manager import Manager
+from .Client import Client

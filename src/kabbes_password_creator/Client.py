@@ -1,28 +1,25 @@
-import kabbes_config
+import kabbes_client
 import kabbes_menu
 import kabbes_password_creator
 import py_starter as ps
 import random
 
-class Manager( kabbes_menu.Menu):
+class Client( kabbes_menu.Menu, kabbes_client.Client ):
 
     _OVERRIDE_OPTIONS = {
         1: ["Word Passwords", "gen_word_user"],
         2: ["Fully Random Passwords", "gen_random_user"]
     }
 
-    _DEFAULT_CONFIG = {
+    _CONFIG = {
+        "_Dir": kabbes_password_creator._Dir,
         "_repo_Dir": kabbes_password_creator._repo_Dir
     }
 
-    def __init__( self, **override_config ):
+    def __init__( self, *args, **kwargs ):
 
         kabbes_menu.Menu.__init__( self )
-
-        config = kabbes_config.Config( **Manager._DEFAULT_CONFIG )
-        self.cfg = kabbes_config.load_Config( kabbes_password_creator.DEFAULT_CONFIG_PATH, config = config )
-        self.cfg.load_dict( override_config )
-        self.cfg.reevaluate()
+        kabbes_client.Client.__init__( self, *args, **kwargs )
 
         self._Children = []
 
