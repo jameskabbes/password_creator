@@ -1,14 +1,14 @@
-import kabbes_client
+import kabbes_user_client
 import kabbes_menu
 import kabbes_password_creator
 import py_starter as ps
 import random
 
-class Client( kabbes_menu.Menu, kabbes_client.Client ):
+class Client( kabbes_menu.Menu ):
 
     _OVERRIDE_OPTIONS = {
-        1: ["Word Passwords", "gen_word_user"],
-        2: ["Fully Random Passwords", "gen_random_user"]
+        "1": ["Word Passwords", "gen_word_user"],
+        "2": ["Fully Random Passwords", "gen_random_user"]
     }
 
     _CONFIG = {
@@ -16,11 +16,11 @@ class Client( kabbes_menu.Menu, kabbes_client.Client ):
         "_repo_Dir": kabbes_password_creator._repo_Dir
     }
 
-    def __init__( self, *args, **kwargs ):
+    cfg = kabbes_user_client.Client( dict=_CONFIG ).cfg
+
+    def __init__( self ):
 
         kabbes_menu.Menu.__init__( self )
-        kabbes_client.Client.__init__( self, *args, **kwargs )
-
         self._Children = []
 
     def choose_password( self, passwords ):
