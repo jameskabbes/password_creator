@@ -1,5 +1,3 @@
 import kabbes_password_creator
-
-if __name__ == '__main__':
-    M = kabbes_password_creator.Client()
-    M.run()
+C = kabbes_password_creator.Client()
+C.run()
