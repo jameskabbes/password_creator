@@ -1,17 +1,20 @@
-import kabbes_user_client
-import kabbes_menu
+import kabbes_client
 import kabbes_password_creator
 import py_starter as ps
 
 class Client( kabbes_password_creator.PasswordCreator ):
 
-    BASE_CONFIG_DICT = {
-        "_Dir": kabbes_password_creator._Dir,
+    _BASE_DICT = {
         "_repo_Dir": kabbes_password_creator._repo_Dir
     }
 
-    def __init__( self, dict={}, **kwargs ):
+    def __init__( self, dict={} ):
 
-        dict = ps.merge_dicts( Client.BASE_CONFIG_DICT, dict )
-        self.cfg_password = kabbes_user_client.Client( dict=dict, **kwargs ).cfg
+        d = {}
+        d.update( Client._BASE_DICT )
+        d.update( dict )
+
+        self.Package = kabbes_client.Package( kabbes_password_creator._Dir, dict=d )
+        self.cfg_password = self.Package.cfg
+
         kabbes_password_creator.PasswordCreator.__init__( self )

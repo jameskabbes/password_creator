@@ -1,23 +1,11 @@
 {
-    "data":{
-        "!Dir":{
-            "$ref": "{{_repo_Dir}}",
-            "method": {
-                "name": "join_Dir",
-                "kwargs":{
-                    "path": "Data"
-                }    
-            }
-        }
-    },
-
     "words":{
         "!Path":{
-            "$ref": "{{data.Dir}}",
+            "$ref": "{R{_repo_Dir}R}",
             "method": {
                 "name": "join_Path",
                 "kwargs":{
-                    "path": "words.txt"
+                    "path": "Data/words.txt"
                 }    
             }
         }
