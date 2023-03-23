@@ -5,7 +5,6 @@ import py_starter as ps
 class Client( kabbes_password_creator.PasswordCreator ):
 
     _BASE_DICT = {
-        "_repo_Dir": kabbes_password_creator._repo_Dir
     }
 
     def __init__( self, dict={} ):
