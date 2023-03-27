@@ -1,0 +1,34 @@
+{
+    "words":{
+        "!Path":{
+            "$ref": "{R{_repo_Dir}R}",
+            "method": {
+                "name": "join_Path",
+                "kwargs":{
+                    "path": "Data/words.txt"
+                }    
+            }
+        }
+    },
+    "gen":{
+        "options": ["digits","lowercases","specials","uppercases"],
+        "digits": ["0","1","2","3","4","5","6","7","8","9"],
+        "lowercases": ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"],
+        "specials": ["!","@","#","$","%","^","&","*","(",")"],
+        "uppercases": ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
+        "n_words": 2,
+        "camelcase": true,
+        "n_digits": 1,
+        "n_specials": 1,
+        "min_digits":1,
+        "max_digits":10,
+        "min_lowercases":1,
+        "max_lowercases":10,
+        "min_uppercases":1,
+        "max_uppercases":10,
+        "min_specials":1,
+        "max_specials":10,
+        "length": 10
+
+    }
+}
