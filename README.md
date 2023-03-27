@@ -1,8 +1,8 @@
-[GitHub Pages](https://jameskabbes.github.io/password_creator)<br>
-[PyPI](https://pypi.org/project/kabbes-password-creator)
-
 # password_creator
 Easily generate random passwords
+
+[Documentation](https://jameskabbes.github.io/password_creator)<br>
+[PyPI](https://pypi.org/project/kabbes-password-creator)
 
 <br> 
 
