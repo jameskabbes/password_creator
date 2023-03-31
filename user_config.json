@@ -1,0 +1,11 @@
+{
+    "kabbes_s3synchrony":
+    {
+        "platform": "s3",
+        "local_data_rel_dir": "Data",
+        "remote_data_dir": "password_creator",
+        "aws_bkt": "jameskabbes-personal",
+        "aws_role_shorthand": "jameskabbes",
+        "template": "default"
+    }
+}
