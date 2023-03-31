@@ -1,2 +1,4 @@
-    kabbes_py_starter
-    kabbes_dir_ops   
+kabbes_py_starter
+kabbes_dir_ops   
+kabbes_client
+kabbes_menu
